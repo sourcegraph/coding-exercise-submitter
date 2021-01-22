@@ -26,6 +26,8 @@ async function main(): Promise<void> {
                     !path.includes('.cache') &&
                     !path.includes('.vscode') &&
                     !path.endsWith('.tar') &&
+                    !path.endsWith('.png') &&
+                    !path.endsWith('.jpg') &&
                     !path.endsWith('.zip'),
             },
             ['.']
