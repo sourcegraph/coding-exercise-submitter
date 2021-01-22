@@ -1,0 +1,36 @@
+{
+  "name": "@sourcegraph/coding-exercise-submitter",
+  "description": "Submit CLI to submit coding exercise solutions",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "^14.0.0"
+  },
+  "bin": "dist/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sourcegraph/coding-exercise-submitter.git",
+    "directory": "cli"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "../node_modules/.bin/tsc -p .",
+    "watch": "../node_modules/.bin/tsc -p . -w"
+  },
+  "devDependencies": {
+    "@sourcegraph/eslint-config": "^0.20.19",
+    "@sourcegraph/prettierrc": "^3.0.3",
+    "@sourcegraph/tsconfig": "^4.0.1",
+    "@types/inquirer": "^7.3.1",
+    "@types/tar": "^4.0.4"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "got": "^11.8.1",
+    "inquirer": "^7.3.3",
+    "ora": "^5.3.0",
+    "tar": "^6.1.0"
+  }
+}

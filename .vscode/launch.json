@@ -1,0 +1,31 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/dist/test-server.js",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "env": {
+        "CODESANDBOX_COLLECTION_ID": "c0ff171b-32a9-41f6-8bf1-894a1ae10c80",
+        "CODESANDBOX_TOKEN": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJDb2RlU2FuZGJveCIsImV4cCI6MTYxMzIxNzI4NiwiaWF0IjoxNjEwNjI1Mjg2LCJpc3MiOiJDb2RlU2FuZGJveCIsImp0aSI6IjcyZGQxNDdmLWUzNTAtNGM1My05NWRjLWQ0NmM0MDk0MzMzYiIsIm5iZiI6MTYxMDYyNTI4NSwic3ViIjoiVXNlcjpmNWEyZjliYi0xZjJlLTQxODItYTE1NC0zYzAwMjU3Y2YxN2QiLCJ0eXAiOiJhY2Nlc3MifQ.66K1bmRUdF3n3zzDslDGLSDpNtrhZqr6QLYfQAq5MkOrmP-yy2uULzNjg4ZSVaaJbm0vgSP4VoSvLFTYZGLOqA",
+      },
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch CLI",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/dist/cli.js",
+      "cwd": "${env:HOME}/coding-exercises/Aaron Thompson",
+      // "cwd": "${env:HOME}/react-test",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "env": {},
+    },
+  ],
+}
