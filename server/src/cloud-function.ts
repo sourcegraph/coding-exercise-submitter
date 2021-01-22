@@ -69,7 +69,6 @@ export const serve = async (request: Request, response: Response, next: NextFunc
             responseType: 'json',
             json,
         })
-        console.log(codesandboxResponse.body)
         response.status(203).json({ sandboxUrl: `https://codesandbox.io/s/${codesandboxResponse.body.data.alias}` })
     } catch (error) {
         console.error(error)
