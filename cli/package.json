@@ -1,6 +1,6 @@
 {
   "name": "@sourcegraph/coding-exercise-submitter",
-  "description": "Submit CLI to submit coding exercise solutions",
+  "description": "CLI to submit coding exercise solutions",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "engines": {
