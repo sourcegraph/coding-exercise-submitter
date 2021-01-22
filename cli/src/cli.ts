@@ -10,6 +10,7 @@ const UPLOAD_URL =
     process.env.UPLOAD_URL || 'https://us-central1-sourcegraph-dev.cloudfunctions.net/submit-coding-exercise'
 
 async function main(): Promise<void> {
+    console.log('Ready to upload 🚀')
     const { fullName } = await prompt<{ fullName: string }>([
         { type: 'input', message: 'Please enter your full name:', name: 'fullName' },
     ])
@@ -34,14 +35,16 @@ async function main(): Promise<void> {
     const url = new URL(UPLOAD_URL)
     url.searchParams.set('fullName', fullName)
 
+    console.log('')
     const spinner = ora('Uploading').start()
 
     try {
         const response = await got.post<{ sandboxUrl: string }>(url.href, { body: tarStream, responseType: 'json' })
         spinner.succeed('Success')
         console.log(
-            'Please send an email to us containing the following URL:\n' +
-                chalk.bold.underline(response.body.sandboxUrl)
+            '\nPlease send an email to us containing the following URL:\n' +
+                chalk.bold.underline(response.body.sandboxUrl) +
+                '\n'
         )
     } catch (error) {
         spinner.fail('Something went wrong')
