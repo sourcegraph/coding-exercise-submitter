@@ -21,7 +21,7 @@ enum Privacy {
     Private = 2,
 }
 
-export const serve = async (request: Request, response: Response, next: NextFunction): Promise<void> => {
+export const serve = async (request: Request, response: Response): Promise<void> => {
     try {
         const fullName = request.query.fullName
         if (typeof fullName !== 'string') {
@@ -45,7 +45,7 @@ export const serve = async (request: Request, response: Response, next: NextFunc
                     }
                     entry.resume()
                 }
-            })().catch(next)
+            })().catch(error => tarStream.emit('error', error))
         })
         await once(tarStream, 'end')
         console.log('Making request to Codesandbox for', fullName)
@@ -56,7 +56,7 @@ export const serve = async (request: Request, response: Response, next: NextFunc
             sandbox: decamelizeKeys({
                 ...sandbox,
                 collectionId,
-                title: `Submission by ${fullName}`,
+                title: `${fullName} - Coding exercise submission`,
                 private: Privacy.Private,
             }),
         }
@@ -76,8 +76,7 @@ export const serve = async (request: Request, response: Response, next: NextFunc
             console.error(error.response.body)
         }
         response.status(error.status ?? 500).send(error?.response?.body || error.message)
-        next(error)
-        return
+        throw error
     }
 }
 
