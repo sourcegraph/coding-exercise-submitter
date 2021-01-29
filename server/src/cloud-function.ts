@@ -73,7 +73,8 @@ export const serve = async (request: Request, response: Response): Promise<void>
     } catch (error) {
         console.error(error)
         if (error instanceof HTTPError) {
-            console.error(error.response.body)
+            console.error('Response body:', error.response.body)
+            console.error('Request payload:', error.options.json)
         }
         response.status(error.status ?? 500).send(error?.response?.body || error.message)
         throw error
