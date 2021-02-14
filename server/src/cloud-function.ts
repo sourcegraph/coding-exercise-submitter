@@ -56,7 +56,7 @@ export const serve = async (request: Request, response: Response): Promise<void>
             sandbox: decamelizeKeys({
                 ...sandbox,
                 collectionId,
-                title: `${fullName} - Coding exercise submission`,
+                title: `Submission by ${fullName}`,
                 private: Privacy.Private,
             }),
         }
