@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@sourcegraph/tsconfig": "^4.0.1",
-    "@types/express": "^4.17.11",
+    "@types/express": "4.17.12",
     "@types/humps": "^2.0.0",
     "@types/node": "^14.14.20",
     "@types/stream-to-array": "^2.3.0",
