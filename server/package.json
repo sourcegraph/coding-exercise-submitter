@@ -28,7 +28,7 @@
     "express": "^4.17.1"
   },
   "dependencies": {
-    "codesandbox-import-utils": "^2.2.2",
+    "codesandbox-import-utils": "^2.2.3",
     "got": "^11.8.1",
     "humps": "^2.0.1",
     "shortid": "^2.2.16",
