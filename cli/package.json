@@ -25,7 +25,7 @@
     "@sourcegraph/eslint-config": "^0.20.19",
     "@sourcegraph/prettierrc": "^3.0.3",
     "@sourcegraph/tsconfig": "^4.0.1",
-    "@types/inquirer": "^7.3.1",
+    "@types/inquirer": "8.2.1",
     "@types/tar": "^4.0.4"
   },
   "dependencies": {
