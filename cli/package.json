@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^14.0.0"
+    "node": "^v16.17.1"
   },
   "bin": {
     "submit-sourcegraph-coding-exercise": "dist/cli.js"

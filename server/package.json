@@ -4,7 +4,7 @@
   "version": "0.0.0-DEVELOPMENT",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^14.0.0"
+    "node": "^v16.17.1"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "@sourcegraph/tsconfig": "^4.0.1",
     "@types/express": "^4.17.11",
     "@types/humps": "^2.0.0",
-    "@types/node": "^14.14.20",
+    "@types/node": "16.11.60",
     "@types/stream-to-array": "^2.3.0",
     "@types/tar": "^4.0.4",
     "express": "^4.17.1"
