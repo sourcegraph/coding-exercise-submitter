@@ -22,7 +22,7 @@
     "watch": "../node_modules/.bin/tsc -p . -w"
   },
   "devDependencies": {
-    "@sourcegraph/eslint-config": "^0.20.19",
+    "@sourcegraph/eslint-config": "^0.37.1",
     "@sourcegraph/prettierrc": "^3.0.3",
     "@sourcegraph/tsconfig": "^4.0.1",
     "@types/inquirer": "^7.3.1",
