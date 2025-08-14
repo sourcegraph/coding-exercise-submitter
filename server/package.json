@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "codesandbox-import-utils": "^2.2.2",
-    "got": "^11.8.1",
+    "got": "^11.8.6",
     "humps": "^2.0.1",
     "shortid": "^2.2.16",
     "stream-to-array": "^2.3.0",
